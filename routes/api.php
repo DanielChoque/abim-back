@@ -14,9 +14,7 @@ Route::get('/student/{id}', function(){
     return 'obtener un studiante Student';
 });
 
-Route::post('/student', function(){
-    return 'Crear Student';
-});
+Route::post('/student', [asociadoController::class, 'store']);
 
 Route::put('/student/{id}', function(){
     return 'actualizar Student';
