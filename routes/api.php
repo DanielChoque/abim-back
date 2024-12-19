@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Api\aporteController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Api\asociadoController;
@@ -23,3 +24,6 @@ Route::put('/student/{id}', function(){
 Route::delete('/student/{id}', function(){
     return 'borrar Student';
 });
+
+
+Route::post('/aporte', [aporteController::class, 'store']);
